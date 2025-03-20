@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+# *.env
+.env.local
+.env.*.local
+
+# Virtual Environment
+venv/
+
+*.venv
+*.virtualenv
+./venv
+# FastAPI logs and cache
+logs/
+*.log
+*.out
+*.err
+*.sqlite3
+instance/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.iml
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Migrations (if using Alembic)
+migrations/
+
+# Database files
+*.sqlite3
+*.db
+
+# Docker
+docker-compose.override.yml
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Node.js (if using frontend in the same repo)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Static files
+staticfiles/
+media/
+.
