@@ -4,6 +4,7 @@ from fastapi.responses import JSONResponse
 import time
 import os
 from pathlib import Path
+import uvicorn
 
 from .core.config import settings
 from .db.database import engine, Base
@@ -81,7 +82,6 @@ app.include_router(protected.router, prefix=settings.API_V1_STR)
 app.include_router(smart_AI_pdf.router, prefix=settings.API_V1_STR)
 
 
-
 @app.on_event("startup")
 async def startup_event():
     """
@@ -112,3 +112,7 @@ async def health_check():
     Health check endpoint
     """
     return {"status": "ok", "timestamp": time.time()}
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
